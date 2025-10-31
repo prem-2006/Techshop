@@ -1,53 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechShop - Choose Your Plan</title>
- <link rel="stylesheet" href="techshop.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>TechShop — Ultimate</title>
 </head>
 <body>
-  <header>
-    <h1>💻 TechShop Plans</h1>
-  </header>
 
-  <section class="plans">
-    <div class="card">
-      <h2>Basic</h2>
-      <p class="price">$9/month</p>
+<!-- animated back layers -->
+<div class="bg-animated" aria-hidden="true"></div>
+<div class="wave" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">⚙️ <span style="color:#e6eefc">TechShop</span></div>
+  <div class="navlinks">
+    <a href="index.html">Home</a>
+    <a href="contact.html">Contact</a>
+    <a href="#plans">Plans</a>
+    <a href="payment.html">Payment</a>
+  </div>
+</nav>
+
+<div class="container">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="kicker">BAAP LEVEL DEALS</div>
+      <h1>Power up your workflow — pick the right plan</h1>
+      <p>Animated background, smooth interactions, music toggle, images, and deploy-ready buy flow. Impress your sir — show, click, boom.</p>
+
+      <div class="hero-cta">
+        <button class="btn" id="exploreBtn">Explore Plans ↓</button>
+
+        <div class="music-toggle" title="Toggle background music">
+          <button id="musicToggle">Play Music</button>
+          <small style="color:#9fb3d9">Cheri Cheri Lady (open)</small>
+        </div>
+
+        <a class="btn secondary" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="showcase">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop&crop=faces" alt="tech image"/>
+        <div style="text-align:center;font-weight:700;color:#cfe8ff">Start small — scale fast</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANS -->
+  <section id="plans" class="plans" aria-label="plans">
+    <!-- BASIC -->
+    <div class="plan">
+      <div class="title">Basic <span style="font-size:.8rem;color:#cbd5e1;margin-left:auto">Starter</span></div>
+      <div class="price">$9 / mo</div>
       <ul class="features">
-        <li>Access to basic tools</li>
+        <li>Basic tools access</li>
+        <li>5 GB Cloud</li>
         <li>Email support</li>
-        <li>5 GB Cloud Storage</li>
       </ul>
-      <button class="btn">Choose Basic</button>
+      <div class="img-row">
+        <img src="https://images.unsplash.com/photo-1581093588401-8b1b73d7f3c2?q=80&w=400&auto=format&fit=crop" alt="icon"/>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=400&auto=format&fit=crop" alt="icon"/>
+      </div>
+      <div style="margin-top:14px;text-align:center">
+        <button class="btn" onclick="goToPayment('Basic')">Buy Basic</button>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Premium</h2>
-      <p class="price">$29/month</p>
+    <!-- PREMIUM -->
+    <div class="plan">
+      <div class="title">Premium <span style="font-size:.8rem;color:#cbd5e1;margin-left:auto">Popular</span></div>
+      <div class="price">$29 / mo</div>
       <ul class="features">
-        <li>All Basic features</li>
+        <li>Everything in Basic</li>
         <li>Priority support</li>
-        <li>50 GB Cloud Storage</li>
+        <li>50 GB Cloud</li>
       </ul>
-      <button class="btn">Choose Premium</button>
+      <div class="img-row">
+        <img src="https://images.unsplash.com/photo-1518169640852-5f9ad7f4c792?q=80&w=400&auto=format&fit=crop" alt="img"/>
+        <img src="https://images.unsplash.com/photo-1526378724126-9963b5f0f3b0?q=80&w=400&auto=format&fit=crop" alt="img"/>
+      </div>
+      <div style="margin-top:14px;text-align:center">
+        <button class="btn" onclick="goToPayment('Premium')">Buy Premium</button>
+      </div>
     </div>
 
-    <div class="card">
-      <h2>Pro</h2>
-      <p class="price">$59/month</p>
+    <!-- PRO -->
+    <div class="plan">
+      <div class="title">Pro <span style="font-size:.8rem;color:#cbd5e1;margin-left:auto">Full</span></div>
+      <div class="price">$59 / mo</div>
       <ul class="features">
-        <li>All Premium features</li>
-        <li>1 TB Cloud Storage</li>
-        <li>24/7 Customer Support</li>
+        <li>Everything in Premium</li>
+        <li>1 TB Cloud</li>
+        <li>Dedicated support</li>
       </ul>
-      <button class="btn">Choose Pro</button>
+      <div class="img-row">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=400&auto=format&fit=crop" alt="img"/>
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981d?q=80&w=400&auto=format&fit=crop" alt="img"/>
+      </div>
+      <div style="margin-top:14px;text-align:center">
+        <button class="btn" onclick="goToPayment('Pro')">Buy Pro</button>
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2025 TechShop. All Rights Reserved.
+    © 2025 TechShop • Built by Guru Bhai — <a href="contact.html" style="color:#bfe8ff">Contact</a>
   </footer>
+</div>
+
+<!-- AUDIO (placeholder) -->
+<!-- IMPORTANT: Replace the 'src' with your legally owned audio file if you have one.
+     I avoid hosting copyrighted mp3s here. Instead you can:
+     1) put a local msic file in the folder (music.mp3) and set src="music.mp3"
+     2) or click "Open Song" which opens YouTube in a new tab for the official track.
+-->
+<audio id="bgAudio" loop preload="none">
+  <!-- placeholder empty. If you host an allowed file locally, set src="music.mp3" -->
+</audio>
+
+<!-- SCRIPT (interactivity + routing to payment) -->
+<script>
+  // scroll-to-plans
+  document.getElementById('exploreBtn').addEventListener('click', ()=> {
+    document.getElementById('plans').scrollIntoView({behavior:'smooth'});
+  });
+
+  // music control: opens official YouTube in new tab if user wants the song
+  const musicToggle = document.getElementById('musicToggle');
+  const bgAudio = document.getElementById('bgAudio');
+  let playing = false;
+  musicToggle.addEventListener('click', ()=>{
+    // If you have a local/hosted mp3, uncomment the lines below and set the src to your file.
+    // if (!bgAudio.src) bgAudio.src = 'music.mp3'; // <-- replace with your file
+    if (!playing) {
+      // Try play (will only work if browser allows autoplay or user interacted)
+      bgAudio.play().then(()=>{
+        playing = true;
+        musicToggle.textContent = 'Pause Music';
+      }).catch(()=> {
+        // If autoplay blocked -> open YouTube search for the song as fallback
+        const yt = confirm('Autoplay blocked — open song on YouTube? (Cheri Cheri Lady)');
+        if (yt) window.open('https://www.youtube.com/results?search_query=cheri+cheri+lady+modern+talking','_blank');
+      });
+    } else {
+      bgAudio.pause();
+      playing = false;
+      musicToggle.textContent = 'Play Music';
+    }
+  });
+
+  // buy button -> go to payment.html with selected plan as query param
+  function goToPayment(plan){
+    const params = new URLSearchParams();
+    params.set('plan', plan);
+    window.location.href = 'payment.html?' + params.toString();
+  }
+
+  // small UX: pre-load images for smoother feel
+  const imgs = Array.from(document.querySelectorAll('.plan img'));
+  imgs.forEach(i=> { const im = new Image(); im.src = i.src; });
+
+  // subtle entrance animation when visible
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(ent=>{
+      if(ent.isIntersecting) ent.target.style.transform='translateY(0)';
+    });
+  },{threshold:0.15});
+  document.querySelectorAll('.plan').forEach(p=> { p.style.transform='translateY(30px)'; observer.observe(p); });
+
+</script>
 </body>
 </html>
